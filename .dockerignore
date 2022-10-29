@@ -1,0 +1,17 @@
+__tests__
+.circleci
+.husky
+.next
+.swc
+.vscode
+node_modules
+.dockerignore
+.eslintrc
+.gitignore
+.git
+.prettierignore
+.prettierrc
+.versionrc
+CHANGELOG.md
+commitlint.config.js
+README.md

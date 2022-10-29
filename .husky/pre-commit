@@ -1,0 +1,28 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Checking Format, Styles and Types'
+
+# Check Prettier standards
+npm run check:format ||
+(
+    echo 'Prettier Check Failed. Run npm run format and commit again.';
+    false;
+)
+
+# Check ESLint Standards
+npm run check:lint ||
+(
+        echo 'ESLint Check Failed. Make the required changes listed above and commit again.'
+        false; 
+)
+
+# Check tsconfig standards
+npm run check:types ||
+(
+    echo 'Type Check Failed. Make the changes required above and commit again.'
+    false;
+)
+
+# Everything Passes
+echo '✅ Code looks good. Committing.'

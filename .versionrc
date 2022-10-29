@@ -1,0 +1,3 @@
+{
+  "releaseCommitMessageFormat": "chore(release): version {{currentTag}} [skip ci]"
+}
